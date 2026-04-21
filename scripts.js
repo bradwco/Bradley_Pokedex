@@ -6,10 +6,13 @@ Audios(?) - Pokemon Showdown: https://github.com/smogon/pokemon-showdown-client,
 Stats - Repository: https://github.com/lgreski/pokemonData, https://pokemondb.net  
 */
 
-// Stats Importing 
+//Global Vars
+let pokemonData = [];
+let activeType = null;
+
+// Pokemon Importing 
 // "ID","Name","Form","Type1","Type2","Total","HP","Attack","Defense","Sp. Atk","Sp. Def","Speed","Generation"
 
-let pokemonData = [];
 fetch("data/Pokemon_Stats.csv")
   .then(response => response.text())
   .then(text => {
@@ -73,4 +76,29 @@ fetch("data/Pokemon_Stats.csv")
 
   function init(){
     renderGrid(pokemonData)
+  }
+
+  // Filter Pokemon
+  function filterPokemon(){
+    const query = document.getElementById("searchInput").value.toLowerCase().trim();
+
+    let filtered = pokemonData;
+
+    if (query) {
+      filtered = filtered.filter(p =>
+        p.name.toLowerCase().includes(query) || String(p.id).includes(query)
+      );
+    }
+    
+    if(activeType){
+      filtered = filtered.filter(p => p.type1 === activeType || p.type2 === activeType);
+    }
+
+    renderGrid(filtered);
+  }
+
+  // Type Searching
+  function setType(type) {
+    activeType = type;
+    filterPokemon();
   }

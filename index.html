@@ -6,7 +6,27 @@
   <title>Pokedex</title>
 </head>
 <body>
-  <p>test</p>
+  <input type="text" id="searchInput" placeholder="Search Pokemon..." oninput="filterPokemon()">
+  <div id="typeFilters">
+    <button onclick="setType(null)">All</button>
+    <button onclick="setType('Normal')">Normal</button>
+    <button onclick="setType('Fire')">Fire</button>
+    <button onclick="setType('Water')">Water</button>
+    <button onclick="setType('Grass')">Grass</button>
+    <button onclick="setType('Electric')">Electric</button>
+    <button onclick="setType('Ice')">Ice</button>
+    <button onclick="setType('Fighting')">Fighting</button>
+    <button onclick="setType('Poison')">Poison</button>
+    <button onclick="setType('Ground')">Ground</button>
+    <button onclick="setType('Flying')">Flying</button>
+    <button onclick="setType('Psychic')">Psychic</button>
+    <button onclick="setType('Bug')">Bug</button>
+    <button onclick="setType('Rock')">Rock</button>
+    <button onclick="setType('Ghost')">Ghost</button>
+    <button onclick="setType('Dragon')">Dragon</button>
+  </div>
+
+
   <div id="pokemonGrid"></div>
   <script src="scripts.js"></script>
 </body>
