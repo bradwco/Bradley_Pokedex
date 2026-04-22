@@ -247,6 +247,40 @@ body {
 
 .tabBar button.active {
     background: #e5e5e5;
-    color: #7f1d1d;
+    color: #7f1d1d;     
     border-color: #b0b0b0;
+}
+
+/* Right side detail styling*/
+.detailEmpty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: #7abf95;
+  font-size: 1rem;
+}
+
+.detailView {
+  display: none;
+  padding: 12px;
+  text-align: center;
+}
+
+.detailSprite {
+  width: 96px;
+  height: 96px;
+  image-rendering: pixelated;
+}
+
+.detailName {
+  color: #c8f7dc;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  margin: 4px 0;
+}
+
+.detailNum {
+  color: #7abf95;
+  font-size: 0.9rem;
 }

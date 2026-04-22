@@ -70,6 +70,7 @@ fetch("data/Pokemon_Stats.csv")
           ${p.type2 ? `<span class="poke-type-pip">${p.type2}</span>` : ""}
         </div>
       `;
+      card.addEventListener("click", () => selectPokemon(p));
       grid.appendChild(card);
     });
   }
@@ -115,3 +116,16 @@ fetch("data/Pokemon_Stats.csv")
     });
     document.querySelector(`.tabBar button[data-tab="${tabName}"]`).classList.add("active");
   }
+
+  // Select a specific Pokemon
+  function selectPokemon(p) {
+  document.querySelector(".detailEmpty").style.display = "none";
+  document.getElementById("detailView").style.display = "block";
+
+  document.getElementById("detailSprite").src = getSprite(p.id);
+  document.getElementById("detailNum").textContent = `#${String(p.id).padStart(3, "0")}`;
+  document.getElementById("detailName").textContent = p.name;
+  document.getElementById("detailTypes").textContent = p.type1 + (p.type2 ? " / " + p.type2 : "");
+
+  switchTab("pokemon");
+}
