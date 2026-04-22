@@ -109,4 +109,9 @@ fetch("data/Pokemon_Stats.csv")
       c.classList.remove("active");
     });
     document.getElementById(`${tabName}Tab`).classList.add("active");
+
+    document.querySelectorAll(".tabBar button").forEach(btn => {
+      btn.classList.remove("active");
+    });
+    document.querySelector(`.tabBar button[data-tab="${tabName}"]`).classList.add("active");
   }

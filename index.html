@@ -63,17 +63,28 @@
 
     <!--Right Side-->
     <div class="pokedexRight"> 
-      <div class ="tabBar">
-        <button onclick="switchTab('pokemon')">POKEMON</button>
-        <button onclick="switchTab('team')">TEAM</button>
-        <button onclick="switchTab('trainer')">TRAINER</button>
+      <div class="tabBar">
+        <button class="active" data-tab="pokemon" onclick="switchTab('pokemon')">POKEMON</button>
+        <button data-tab="team" onclick="switchTab('team')">TEAM</button>
+        <button data-tab="trainer" onclick="switchTab('trainer')">TRAINER</button>
       </div>
 
       <div class="screenBorder">
         <div class="rightScreen">
-          <div class="tabContent active" id="pokemonTab"></div>
+          <div class="tabContent active" id="pokemonTab">
+            <div class ="detailEmpty">
+              <p>Select a Pokemon from the catalog</p>
+            </div>
+            <div class="detailView" id="detailView">
+              <img class="detailSprite" id="detailSprite" src="" alt="">
+              <div class="detailNum" id="detailNum"></div>
+              <div class="detailName" id="detailName"></div>
+              <div class="detailTypes" id="detailTypes"></div>
+              <div class="statBars" id="statBars"></div>
+            </div>
+          </div>
           <div class="tabContent" id="teamTab"></div>
-          <div class="tabContent" id="profileTab"></div>
+          <div class="tabContent" id="trainerTab"></div>
         </div>
       </div>
     </div>
