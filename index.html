@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pokedex</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
 </head>
 <body>
   <div class="pokedex">
@@ -24,22 +26,22 @@
         <div class = "leftScreen">
           <input type="text" id="searchInput" placeholder="Search Pokemon..." oninput="filterPokemon()">
           <div id="typeFilters">
-            <button onclick="setType(null)">All</button>
-            <button onclick="setType('Normal')">Normal</button>
-            <button onclick="setType('Fire')">Fire</button>
-            <button onclick="setType('Water')">Water</button>
-            <button onclick="setType('Grass')">Grass</button>
-            <button onclick="setType('Electric')">Electric</button>
-            <button onclick="setType('Ice')">Ice</button>
-            <button onclick="setType('Fighting')">Fighting</button>
-            <button onclick="setType('Poison')">Poison</button>
-            <button onclick="setType('Ground')">Ground</button>
-            <button onclick="setType('Flying')">Flying</button>
-            <button onclick="setType('Psychic')">Psychic</button>
-            <button onclick="setType('Bug')">Bug</button>
-            <button onclick="setType('Rock')">Rock</button>
-            <button onclick="setType('Ghost')">Ghost</button>
-            <button onclick="setType('Dragon')">Dragon</button>
+            <button onclick="setType(null)">ALL</button>
+            <button onclick="setType('Normal')">NRM</button>
+            <button onclick="setType('Fire')">FIR</button>
+            <button onclick="setType('Water')">WAT</button>
+            <button onclick="setType('Grass')">GRS</button>
+            <button onclick="setType('Electric')">ELC</button>
+            <button onclick="setType('Ice')">ICE</button>
+            <button onclick="setType('Fighting')">FGT</button>
+            <button onclick="setType('Poison')">PSN</button>
+            <button onclick="setType('Ground')">GND</button>
+            <button onclick="setType('Flying')">FLY</button>
+            <button onclick="setType('Psychic')">PSY</button>
+            <button onclick="setType('Bug')">BG</button>
+            <button onclick="setType('Rock')">RCK</button>
+            <button onclick="setType('Ghost')">GHO</button>
+            <button onclick="setType('Dragon')">DGN</button>
           </div>
           <div id="pokemonGrid"></div>
         </div>

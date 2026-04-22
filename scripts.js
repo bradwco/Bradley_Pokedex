@@ -30,13 +30,13 @@ fetch("data/Pokemon_Stats.csv")
           name: clean[1],
           type1: clean[3],
           type2: clean[4] || null,
-          hp: Number(clean[5]),
-          attack: Number(clean[6]),
-          defense: Number(clean[7]),
-          spAtk: Number(clean[8]),
-          spDef: Number(clean[9]),
-          speed: Number(clean[10]),
-          generation: Number(clean[11])
+          hp: Number(clean[6]),
+          attack: Number(clean[7]),
+          defense: Number(clean[8]),
+          spAtk: Number(clean[9]),
+          spDef: Number(clean[10]),
+          speed: Number(clean[11]),
+          generation: Number(clean[12])
         };
       });
       pokemonData = pokemon;
