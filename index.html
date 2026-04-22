@@ -24,6 +24,7 @@
 
       <div class = "screenBorder">
         <div class = "leftScreen">
+          <div class="scanlines"></div>
           <input type="text" id="searchInput" placeholder="Search Pokemon..." oninput="filterPokemon()">
           <div id="typeFilters">
             <button onclick="setType(null)">ALL</button>
@@ -72,9 +73,10 @@
 
       <div class="screenBorder">
         <div class="rightScreen">
+          <div class="scanlines"></div>
           <div class="tabContent active" id="pokemonTab">
             <div class ="detailEmpty">
-              <p>Select a Pokemon from the catalog</p>
+              <p>?</p>
             </div>
             <div class="detailView" id="detailView">
               <img class="detailSprite" id="detailSprite" src="" alt="">
@@ -86,19 +88,15 @@
           </div>
           <div class="tabContent" id="trainerTab">
             <div class="trainerCard">
-              <div class="trainerAvatar">BC</div>
-              <div class="trainerName">BRADLEY</div>
+              <div class="trainerAvatar">
+                <img src="assets/Self_Pokemon_Image.jpg" alt="Bradley">
+              </div>
+              <div class="trainerName">BRADLEY CO</div>
               <div class="trainerBio">
-                UCLA Statistics & Data Science, Class of 2027. Former AI/ML intern at Newegg. Built things that move, think, and occasionally break.
-              </div>
-              <div class="trainerBadges">
-                <span class="badge">Web</span>
-                <span class="badge">ML</span>
-                <span class="badge">Data</span>
-                <span class="badge">Hardware</span>
-              </div>
+                Background: Pokemon has always been a huge part of my life. It started back in elementary school when I was pretty introverted and never really knew how to connect with people. But I met my best friend through our shared interest, and from that point on it just grew with me. To this day, whenever I hear or see anything Pokemon, it truly takes me back to that same youthful joy hits me like it did when I was a kid.
+                <p class="trainerCaption">Pictured: Japan Edition Nurse Pikachu, Bulbasaur, Charmander, Squirtle, Mudkip, Piplup, Flygon, Vibrava, Limited Edition Japan Snorlax Costume Pikachu, Life-Size Snorlax, Pikachu Beanie, Charmander Shirt, Kanto Gym Badge Bracelet</p>
             </div>
-          </div>
+          </div>  
         </div>
       </div>
     </div>
