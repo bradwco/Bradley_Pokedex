@@ -1,0 +1,11 @@
+.pokedex{
+    display: flex;
+}
+
+.tabContent {
+    display: none;
+}
+
+.tabContent.active{
+    display:block;
+}

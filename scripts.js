@@ -102,3 +102,11 @@ fetch("data/Pokemon_Stats.csv")
     activeType = type;
     filterPokemon();
   }
+
+  // Switch tab function to go between Pokemon <=> Team <=> Trainer
+  function switchTab(tabName){
+    document.querySelectorAll(".tabContent").forEach(c => {
+      c.classList.remove("active");
+    });
+    document.getElementById(`${tabName}Tab`).classList.add("active");
+  }

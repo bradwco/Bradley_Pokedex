@@ -4,30 +4,71 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pokedex</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <input type="text" id="searchInput" placeholder="Search Pokemon..." oninput="filterPokemon()">
-  <div id="typeFilters">
-    <button onclick="setType(null)">All</button>
-    <button onclick="setType('Normal')">Normal</button>
-    <button onclick="setType('Fire')">Fire</button>
-    <button onclick="setType('Water')">Water</button>
-    <button onclick="setType('Grass')">Grass</button>
-    <button onclick="setType('Electric')">Electric</button>
-    <button onclick="setType('Ice')">Ice</button>
-    <button onclick="setType('Fighting')">Fighting</button>
-    <button onclick="setType('Poison')">Poison</button>
-    <button onclick="setType('Ground')">Ground</button>
-    <button onclick="setType('Flying')">Flying</button>
-    <button onclick="setType('Psychic')">Psychic</button>
-    <button onclick="setType('Bug')">Bug</button>
-    <button onclick="setType('Rock')">Rock</button>
-    <button onclick="setType('Ghost')">Ghost</button>
-    <button onclick="setType('Dragon')">Dragon</button>
-  </div>
+  <div class="pokedex">
+    <!--Left Side-->
+    <div class="pokedexLeft"> 
+      <!-- Top decorations pieces-->
+      <div class="topBar">
+        <div class = "lens"> </div>
+        <div class ="indicatorLights"> </div>
+      </div>
 
+      <div class = "screenBorder">
+        <div class = "leftScreen">
+          <input type="text" id="searchInput" placeholder="Search Pokemon..." oninput="filterPokemon()">
+          <div id="typeFilters">
+            <button onclick="setType(null)">All</button>
+            <button onclick="setType('Normal')">Normal</button>
+            <button onclick="setType('Fire')">Fire</button>
+            <button onclick="setType('Water')">Water</button>
+            <button onclick="setType('Grass')">Grass</button>
+            <button onclick="setType('Electric')">Electric</button>
+            <button onclick="setType('Ice')">Ice</button>
+            <button onclick="setType('Fighting')">Fighting</button>
+            <button onclick="setType('Poison')">Poison</button>
+            <button onclick="setType('Ground')">Ground</button>
+            <button onclick="setType('Flying')">Flying</button>
+            <button onclick="setType('Psychic')">Psychic</button>
+            <button onclick="setType('Bug')">Bug</button>
+            <button onclick="setType('Rock')">Rock</button>
+            <button onclick="setType('Ghost')">Ghost</button>
+            <button onclick="setType('Dragon')">Dragon</button>
+          </div>
+          <div id="pokemonGrid"></div>
+        </div>
+        <!--Bottom decorative pieces-->
+        <div class="dpad"></div>
+      </div>
+    </div>
 
-  <div id="pokemonGrid"></div>
+    <!--Middle Hinge-->
+    <div class="hinge"> 
+      <div class="hinge-line"></div>
+      <div class="hinge-line"></div>
+      <div class="hinge-line"></div>
+    </div>
+
+    <!--Right Side-->
+    <div class="pokedexRight"> 
+      <div class ="tabBar">
+        <button onclick="switchTab('pokemon')">POKEMON</button>
+        <button onclick="switchTab('team')">TEAM</button>
+        <button onclick="switchTab('trainer')">TRAINER</button>
+      </div>
+
+      <div class="screenBorder">
+        <div class="rightScreen">
+          <div class="tabContent active" id="pokemonTab"></div>
+          <div class="tabContent" id="teamTab"></div>
+          <div class="tabContent" id="profileTab"></div>
+        </div>
+      </div>
+    </div>
+
+  </div> <!--Ending tag of main Pokedex div-->
   <script src="scripts.js"></script>
 </body>
 </html>
