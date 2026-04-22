@@ -128,4 +128,32 @@ fetch("data/Pokemon_Stats.csv")
   document.getElementById("detailTypes").textContent = p.type1 + (p.type2 ? " / " + p.type2 : "");
 
   switchTab("pokemon");
+  renderStatBars(p);
 }
+
+  // Render selected Pokemon's Stats
+  function renderStatBars(p) {
+    var maxStat = 255;
+    var stats = [
+      { label: "HP",   cls: "hp",  value: p.hp },
+      { label: "ATK",  cls: "atk", value: p.attack },
+      { label: "DEF",  cls: "def", value: p.defense },
+      { label: "SP.A", cls: "spa", value: p.spAtk },
+      { label: "SP.D", cls: "spd", value: p.spDef },
+      { label: "SPD",  cls: "spe", value: p.speed }
+    ];
+
+    var container = document.getElementById("statBars");
+    container.innerHTML = stats.map(function(s) {
+      var pct = Math.min((s.value / maxStat) * 100, 100);
+      return `
+        <div class="statRow">
+          <span class="statLabel">${s.label}</span>
+          <span class="statValue">${s.value}</span>
+          <div class="statBarTrack">
+            <div class="statBarFill ${s.cls}" style="width: ${pct}%"></div>
+          </div>
+        </div>
+      `;
+    }).join("");
+  }
