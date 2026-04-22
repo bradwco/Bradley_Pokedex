@@ -1,5 +1,9 @@
-.pokedex{
-    display: flex;
+body {
+  background: #1e293b;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .tabContent {
@@ -8,4 +12,78 @@
 
 .tabContent.active{
     display:block;
+}
+
+.pokedex {
+  display: flex;
+  max-width: 1100px;
+  width: 100%;
+}
+
+.pokedexLeft, .pokedexRight {
+  background: #dc2626;
+  padding: 20px;
+  border: 3px solid #7f1d1d;
+}
+
+.pokedexLeft {
+  width: 55%;
+  border-radius: 20px 0 0 20px;
+  border-right: none;
+}
+
+.pokedexRight {
+  width: 45%;
+  border-radius: 0 20px 20px 0;
+  border-left: none;
+}
+
+.hinge {
+  width: 28px;
+  background: #991b1b;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 12px;
+  border-top: 3px solid #7f1d1d;
+  border-bottom: 3px solid #7f1d1d;
+}
+
+.hinge-line {
+  height: 2px;
+  background: rgba(0, 0, 0, 0.3);
+  margin: 0 4px;
+}
+
+.screenBorder {
+  background: #e5e5e5;
+  border-radius: 8px;
+  padding: 8px;
+  border: 2px solid #b0b0b0;
+}
+
+.leftScreen, .rightScreen {
+  background: #1a3a3a;
+  border-radius: 4px;
+  box-shadow: inset 0 3px 12px rgba(0, 0, 0, 0.5);
+}
+
+.leftScreen {
+  height: 520px;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.rightScreen {
+  overflow-y: auto;
+}
+
+#pokemonGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 6px;
+  padding: 8px;
+  overflow-y: auto;
+  flex: 1;
 }
