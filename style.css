@@ -74,7 +74,6 @@ body {
   flex-direction: column;
 }
 
-
 .rightScreen {
   overflow-y: auto;
 }
@@ -87,3 +86,138 @@ body {
   overflow-y: auto;
   flex: 1;
 }
+
+/*Top Decorative Styling*/
+.lens{
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 35%, #93c5fd, #60a5fa, #1e40af);
+  border: 4px solid #d1d5db;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.indicatorLights{
+    display: flex;
+    gap: 8px;
+}
+
+.light {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.light.red    { background: #ef4444; }
+.light.yellow { background: #facc15; }
+.light.green  { background: #22c55e; }
+
+.topBar {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 16px;
+  padding: 0 4px;
+}
+
+/*Bottom Decorative*/
+.dpad {
+  display: grid;
+  grid-template-areas:
+    ". up ."
+    "left center right"
+    ". down .";
+  grid-template-columns: 22px 22px 22px;
+  grid-template-rows: 22px 22px 22px;
+  margin-top: 16px;
+  margin-left: 10px;
+}
+
+.dpad-up, .dpad-down, .dpad-left, .dpad-right, .dpad-center {
+  background: #1f2937;
+  border: 1px solid #374151;
+}
+
+.dpad-up     { grid-area: up;     border-radius: 4px 4px 0 0; }
+.dpad-right  { grid-area: right;  border-radius: 0 4px 4px 0; }
+.dpad-down   { grid-area: down;   border-radius: 0 0 4px 4px; }
+.dpad-left   { grid-area: left;   border-radius: 4px 0 0 4px; }
+.dpad-center { grid-area: center; }
+
+/* Search Bar Styling */
+#searchInput {
+  background: rgba(0, 0, 0, 0.35);
+  border: 1px solid #3298a8;
+  border-radius: 4px;
+  padding: 6px 10px;
+  color: #c8f7dc;
+  font-size: 1rem;
+  outline: none;
+  margin: 8px;
+}
+
+#searchInput::placeholder {
+  color: #7abf95;
+  opacity: 0.6;
+}
+
+/* Type Button Selector Styling */
+#typeFilters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3px;
+  padding: 4px 8px;
+}
+
+#typeFilters button {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 3px;
+  color: #fff;
+  font-size: 0.75rem;
+  padding: 3px 6px;
+  cursor: pointer;
+}
+
+#typeFilters button:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Each Pokemon Card Styling */
+.poke-card {
+  background: rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(50, 152, 168, 0.15);
+  border-radius: 6px;
+  padding: 8px 6px 6px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.poke-card:hover {
+  background: rgba(50, 152, 168, 0.15);
+  border-color: #3298a8;
+}
+
+.poke-num {
+  color: #7abf95;
+  font-size: 0.85rem;
+}
+
+.poke-name {
+  color: #c8f7dc;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+}
+
+.poke-sprite {
+  width: 56px;
+  height: 56px;
+  image-rendering: pixelated;
+}
+
+.poke-type-pip {
+  font-size: 0.65rem;
+  color: #c8f7dc;
+}
+
